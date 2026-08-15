@@ -1,4 +1,5 @@
 *{box-sizing:border-box}
+
 html{scroll-behavior:smooth}
 
 body{
@@ -23,14 +24,64 @@ color:#dce5ff
 .social{
 display:flex;
 align-items:center;
-gap:18px;
+gap:14px;
 white-space:nowrap
 }
 
 .social a{
-color:#6ed2ff;
+color:#fff;
 text-decoration:none;
-font-weight:600
+font-weight:600;
+display:flex;
+align-items:center;
+justify-content:center;
+width:38px;
+height:38px;
+border-radius:50%;
+transition:.3s
+}
+
+.social a:hover{
+transform:scale(1.1)
+}
+
+/* WhatsApp */
+.social a:first-child{
+background:#25D366
+}
+
+.social a:first-child::before{
+content:"";
+width:20px;
+height:20px;
+border:2px solid #fff;
+border-radius:50%;
+display:block;
+position:relative
+}
+
+/* Instagram */
+.social a:last-child{
+background:linear-gradient(135deg,#833AB4,#E1306C,#F77737);
+position:relative
+}
+
+.social a:last-child::before{
+content:"";
+width:19px;
+height:19px;
+border:2px solid #fff;
+border-radius:6px;
+display:block
+}
+
+.social a:last-child::after{
+content:"";
+position:absolute;
+width:5px;
+height:5px;
+border:2px solid #fff;
+border-radius:50%
 }
 
 .nav{
@@ -94,7 +145,8 @@ padding:95px 6% 70px;
 background:radial-gradient(circle at 75% 45%,rgba(41,117,255,.22),transparent 35%)
 }
 
-.badge,.section-label{
+.badge,
+.section-label{
 color:#75d4ff;
 font-weight:800;
 letter-spacing:2px;
@@ -277,7 +329,7 @@ border-top:1px solid #25324d
 }
 
 
-/* TABLET / MOBILE */
+/* TABLET */
 
 @media(max-width:800px){
 
@@ -354,21 +406,22 @@ font-size:20px
 .social{
 display:flex;
 align-items:center;
-gap:12px
+gap:10px
 }
 
 .social a{
-font-size:0
+width:36px;
+height:36px
 }
 
 .social a:first-child::before{
-content:"💬";
-font-size:22px
+width:19px;
+height:19px
 }
 
 .social a:last-child::before{
-content:"📷";
-font-size:22px
+width:18px;
+height:18px
 }
 
 }
