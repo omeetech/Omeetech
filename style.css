@@ -174,5 +174,22 @@ flex-direction:column
 .hero>p{font-size:17px}
 .section h2{font-size:36px}
 .rating strong{font-size:20px}
-.social{display:none}
+.social{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.social a{
+font-size:0;
+}
+
+.social a:first-child::before{
+content:"💬";
+font-size:22px;
+}
+
+.social a:last-child::before{
+content:"📷";
+font-size:22px;
 }
